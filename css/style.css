@@ -1,3 +1,4 @@
+/**classes necessarias**/
 *{
     margin: 0;
     padding: 0;
@@ -16,6 +17,7 @@
 }
 
 .w50{
+    padding: 0 2%;
     width: 50%;
 }
 
@@ -31,8 +33,206 @@
     float: right;
 }
 
+.img{
+    width: 100%;
+}
+
+/**classes do site com estilo**/
+/**cabecalho**/
+header{
+    padding: 25px 0;
+    background: rgba(94, 22, 68, 0.9);
+}
+.logo{
+    font-size: 35px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+.mobile{
+    display: none;
+}
+.desktop a{
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: transform .2s;
+}
+.desktop a:hover {
+    color: black;
+  }
+.desktop ul{
+    position: relative;
+    top: 10px;
+    list-style: none;
+}
+.desktop li{
+    display: inline-block;
+    padding: 0 30px;
+}
+
+/**imagem de fundo**/
+.banner{
+    background-image: url('../img/bg1.png');
+    height: 600px;
+    background-size: cover;
+    width: 100%;
+    position: relative;
+}
+.mensagem{
+    color: #ffffff;
+    border: 4px solid #ffffff;
+    border-radius: 15px;
+    text-transform: uppercase;
+    padding: 30px 50px;
+    position: absolute;
+    width: 100%;
+    max-width: 430px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 58px;
+    font-weight: 400;
+}
+
+/**descricao do autor e foto**/
+.autor{
+    background: rgba(94, 22, 68, 0.9);
+    padding: 50px 0;
+}
+.autor h2{
+    color: #ffffff;
+    font-size: 30px;
+    margin-top: 40px;
+}
+.autor p{
+    color: #ffffff;
+    font-size: 17px;
+    margin-top: 15px;
+}
+.bola-foto{
+    border-radius: 50%;
+}
+
+/**especialidade**/
+.titulo-especialidades{
+    color: rgba(94, 22, 68);
+    text-align: center;
+    margin-top: 25px;
+}
+.especialidades h3{
+    color: rgba(94, 22, 68);
+    font-size: 30px;
+    text-align: center;
+}
+.especialidades i{
+    margin-top: 50px;
+    font-size: 85px;
+}
+.conteudo-especialidade p{
+    color: rgba(94, 22, 68);
+    text-align: justify;
+    max-width: 350px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+/**curriculo e projetos**/
+.curriculo{
+    background-color: rgba(94, 22, 68, 0.9);
+    color: #ffffff;
+    padding: 50px 0;
+}
+.titulo{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.single{
+    max-width: 350px;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+.emprego{
+    font-size: 25px;
+}
+.proejto{
+    margin-bottom: 10px;
+}
+.projeto li{
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+/**footer**/
+footer{
+    padding: 35px 0;
+    background: rgba(94, 22, 68);
+    color: #ffffff; 
+    text-align: center;
+}
 
 
 
+/**responsivo**/
+@media screen and (max-width: 1200px){
 
+    .bola-foto{
+        float: none !important;
+    }
+    img{
+        display: block;
+        margin: 0 auto;
+        max-width: 400px;
+    }
+    .w50{
+        padding: 20px;
+        width: 100%;
+    }
+    .autor h2{
+        text-align: center;
+    }
+    .curriculo{
+        text-align: center;
+    }
+    .single{
+        max-width: 100%;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 780px){
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        display: block;
+    }
+    .mobile ul{
+        width: 100%;
+        z-index: 3;
+        position: absolute;
+        left: 0;
+        top: 92px;
+        display: none;
+        text-align: center;
+    }
+    .mobile li{
+        font-weight: 400;
+        font-size: 15px;
+        display: block;
+        background: rgba(94, 22, 68, 0.9);
+        border: 1px solid #ffffff;
+    }
+    .mobile a{
+        padding: 5px 0; 
+        display: block;
+        color: #ffffff;
+        text-decoration: none;
+    }
+    .botao-mobile{
+        color: #ffffff;
+        font-size: 30px;
+        cursor: pointer;
+        margin-right: 20px;
+    }
+}
 
