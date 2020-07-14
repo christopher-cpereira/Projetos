@@ -2,7 +2,7 @@
 
 <!--vamos incluir o config.php assim o caminho do nossa site sera arrumado sempre que alguem tentar colocar uma url zoada, com o htacess vai vir o index.php mas sem estilo.css ou js por exemplo, apos fazer a inclusao do config.php podemos usar o include_path na frente de nossos arquivos como javascript ou css para evitar problemas de perder imagens ou estilo-->
 
-<!--infelizmente isso precisa ser repetido para tudo que e incluido no nosso site, como imagens ou qlq arquivo, ate o js nao funciona-->
+<!--infelizmente isso precisa ser repetido para tudo que e incluido no nosso site, como imagens ou qlq arquivo, ate o js nao funciona se nao colocar-->
 
 <!--o include_path ja arruma tambem as url deixando elas amigaveis quando vamos navegar nos a href-->
 <?php include('config.php');?>
