@@ -171,6 +171,20 @@ footer{
     text-align: center;
 }
 
+/**pagina de erro 404**/
+.erro404{
+    height: 780px;
+    width: 100%;
+    background-image: url('../img/404.png');
+}
+section.erro404 h2{
+    color: #ffffff;
+    text-align: center;
+    padding-top: 50px;
+}
+section.erro404 a{
+    text-decoration: none;
+}
 
 
 /**responsivo**/

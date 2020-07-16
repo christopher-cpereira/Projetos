@@ -63,7 +63,7 @@
             include('pages/'.$url.'.php');
         }else{
             //podemos incluir uma pagina de erro 404 por exemplo
-            include('pages/404.php');
+            include('pages/erro404.php');
         }
     ?>
     
