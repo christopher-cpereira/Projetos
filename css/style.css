@@ -74,7 +74,7 @@ header{
 /**imagem de fundo**/
 .banner{
     background-image: url('../img/bg1.png');
-    height: 600px;
+    height: 800px;
     background-size: cover;
     width: 100%;
     position: relative;
@@ -186,6 +186,35 @@ section.erro404 a{
     text-decoration: none;
 }
 
+/*página de contato**/
+.contato h2{
+    text-align: center;
+    margin-top: 35px;
+    color: rgb(94, 22, 68);
+}
+form{
+    margin: 0 auto;
+    max-width: 450px;
+    margin-top: 35px;
+}
+.contato input{
+    margin: 15px 0;
+    width: 100%;
+    height: 45px;
+    padding: 10px;
+    font-size: 20px;
+    outline: 0;
+}
+.mapa h2{
+    margin-bottom: 35px;
+}
+iframe{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin-top: 150PX;
+}
 
 /**responsivo**/
 @media screen and (max-width: 1200px){
