@@ -19,5 +19,16 @@ $(function(){
             listaMenu.slideToggle();
         }
         //listaMenu.slideToggle();
-     })
+     });
+
+    //barra de rolagem, quando click ele vai ate o conteudo o target
+    //target e a tag q criamos com o switch, se o tamanho da escrita dela for maior q zero faca 
+    if($('target').length > 0){
+        var elemento = '#'+$('target').attr('target');
+        var divScroll = $(elemento).offset().top;
+        $('html,body').animate({'scrollTop':divScroll}, 2000);
+    } 
+
 })
+
+

@@ -6,6 +6,10 @@
     font-family: 'Roboto', sans-serif;
 }
 
+html,body{
+    height: 100%;
+}
+
 .center{
     max-width: 1280px;
     padding: 0 2%;
@@ -215,7 +219,19 @@ iframe{
     transform: translate(-50%,-50%);
     margin-top: 150PX;
 }
-
+input[type=button]{
+    background-color: rgba(94, 22, 68);
+    color: #ffffff;
+    border: 0;
+    cursor: pointer;
+}
+textarea{
+    outline: 0;
+    width: 100%;
+    font-size: 17px;
+    padding: 8px;
+    resize: none;
+}
 /**responsivo**/
 @media screen and (max-width: 1200px){
 

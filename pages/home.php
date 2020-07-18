@@ -4,7 +4,8 @@
 
     </section><!--banner imagem fim-->
 
-    <section class="autor">
+    <!--precisa por o id com os valores do get url para o scroll navegar ate ele-->
+    <section id="quemsou" class="autor">
         <div class="center">
             <div class="w50 left">
                 <h2>Christopher Pereira</h2>
@@ -19,7 +20,8 @@
         </div><!--center fim-->
     </section><!--descricao e foto do autor fim-->
 
-    <section class="especialidades"> 
+    <!--precisa por o id com os valores do get url para o scroll navegar ate ele-->
+    <section id="oquefaco" class="especialidades"> 
         <div class="center">
             <h3 class="titulo-especialidades">Especidalidades</h3>
             <div class="w50 left conteudo-especialidade">

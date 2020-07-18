@@ -5,7 +5,7 @@
             <input type="text" placeholder="Nome" required>
             <input type="email" placeholder="E-mail" required>
             <input type="text" placeholder="Telefone" required>
-            <input type="text-area" placeholder="Deixe sua mensagem" required>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Deixe sua mensagem aqui..."></textarea>
             <input type="button" value="Enviar">
         </form>
         <div class="mapa">
