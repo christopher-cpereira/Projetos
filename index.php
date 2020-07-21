@@ -25,21 +25,7 @@
     <title>Meu portifolio</title>
 </head>
 
-<body>
-    <!--para fazermos o scroll dinamico com a navegacao do menu precisamos verificar a url antes, quando ela receber os valores via get da url, definimos uma tag com um nome nosso para podemos manipula-la com jquery assim criando a animacao da scroll-->
-    <?php
-        $url = isset($_GET['url']) ? $_GET['url'] : 'home';
-
-        switch($url){
-            case 'quemsou':
-                echo '<target target="quemsou" />';
-            break;
-
-            case 'oquefaco':
-                echo '<target target="oquefaco" />';
-            break;
-        }
-    ?>
+<body>   
 
     <header>
         <div class="center">
@@ -71,7 +57,18 @@
     //agr o tratamento que o htacess fazia ainda funciona, mas dessa vez estamos tratando ele de uma maneira diferente.
     //se a url existir... ? pegue a url... : se nao existir atribua home
     //get pega as coisas via url por isso usamos ela aqui para esse tipo de tratamento
-        //$url = isset($_GET['url']) ? $_GET['url'] : 'home';
+    $url = isset($_GET['url']) ? $_GET['url'] : 'home';
+
+    //para fazermos o scroll dinamico com a navegacao do menu precisamos verificar a url antes, quando ela receber os valores via get da url, definimos uma tag com um nome nosso para podemos manipula-la com jquery assim criando a animacao da scroll
+    switch($url){
+        case 'quemsou':
+            echo '<target target="quemsou" />';
+        break;
+
+        case 'oquefaco':
+            echo '<target target="oquefaco" />';
+        break;
+    }
 
     //se o arquivo X dentro de page com o nome da url.php existir faca
         if(file_exists('pages/'.$url.'.php')){

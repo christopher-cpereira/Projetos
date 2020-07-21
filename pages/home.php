@@ -1,5 +1,5 @@
 <section class="banner">
-
+        
             <h2 class="mensagem center">Bem Vindo!</h2>
 
     </section><!--banner imagem fim-->
