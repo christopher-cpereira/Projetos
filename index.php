@@ -21,6 +21,8 @@
     <!--colocamos o include_path, assim o caminho sempre estara correto-->
     <link rel="stylesheet" href="<?php echo INCLUDE_PATH;?>css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--para colcar o icone do site-->
+    <link rel="icon" href="<?php echo INCLUDE_PATH;?>/img/ico.ico" type="image/x-icon">
 
     <title>Meu portifolio</title>
 </head>
