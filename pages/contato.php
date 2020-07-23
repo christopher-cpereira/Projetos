@@ -1,12 +1,52 @@
+<?php
+    require_once('phpmailer/src/PHPMailer.php');
+    require_once('phpmailer/src/SMTP.php');
+    require_once('phpmailer/src/Exception.php');
+
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\SMTP;
+    use PHPMailer\PHPMailer\Exception;
+
+    $email = new PHPMailer(true);
+
+    try{
+        $email->SMTPDebug = SMTP::DEBUG_SERVER;
+        $email->isSMTP();
+        $email->Host = 'smtp.gmail.com';
+        $email->SMTPAuth = true;
+        $email->Username = 'chrissummoners2020@gmail.com';
+        $email->Password = '102030chris';
+        $email->Port = 587;
+
+        $email->setFrom('chrissummoners2020@gmail.com');
+        $email->addAddress('chrissummoners2020@gmail.com');
+
+        $email->isHTML(true);
+        $email->Subject = 'Teste de email chris';
+        $email->Body = 'chegou o email teste e esta e a <strong>mensagem para vc</strong>';
+        $email->AltBody = 'chegou o email teste e esta e a mensagem para vc';
+
+        if($email->send()){
+            echo 'enviado com sucesso';
+        }else{
+            echo 'erro ao enviar';
+        }
+    }catch(Exception $e){
+        echo "erro: {$email->ErrorInfo}";
+    }
+
+
+?>
+
 <section class="contato">
     <div class="center">
     <h2>Entre em contato</h2>
-        <form>
-            <input type="text" placeholder="Nome" required>
-            <input type="email" placeholder="E-mail" required>
-            <input type="text" placeholder="Telefone" required>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Deixe sua mensagem aqui..."></textarea>
-            <input type="button" value="Enviar">
+        <form method="post">
+            <input type="text" placeholder="Nome" name="nome">
+            <input type="email" placeholder="E-mail" name="email">
+            <input type="text" placeholder="Telefone" name="telefone">
+            <textarea name="" id="" cols="30" rows="10" placeholder="Deixe sua mensagem aqui..." name="mensagem"></textarea>
+            <input type="submit" value="Enviar" name="acao">
         </form>
         <div class="mapa">
             <h2>Como chegar</h2>
