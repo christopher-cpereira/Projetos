@@ -1,51 +1,33 @@
 <?php
-    require_once('phpmailer/src/PHPMailer.php');
-    require_once('phpmailer/src/SMTP.php');
-    require_once('phpmailer/src/Exception.php');
-
-    use PHPMailer\PHPMailer\PHPMailer;
-    use PHPMailer\PHPMailer\SMTP;
-    use PHPMailer\PHPMailer\Exception;
-
-    $email = new PHPMailer(true);
-
-    try{
-        $email->SMTPDebug = SMTP::DEBUG_SERVER;
-        $email->isSMTP();
-        $email->Host = 'smtp.gmail.com';
-        $email->SMTPAuth = true;
-        $email->Username = 'chrissummoners2020@gmail.com';
-        $email->Password = '102030chris';
-        $email->Port = 587;
-
-        $email->setFrom('chrissummoners2020@gmail.com');
-        $email->addAddress('chrissummoners2020@gmail.com');
-
-        $email->isHTML(true);
-        $email->Subject = 'Teste de email chris';
-        $email->Body = 'chegou o email teste e esta e a <strong>mensagem para vc</strong>';
-        $email->AltBody = 'chegou o email teste e esta e a mensagem para vc';
-
-        if($email->send()){
-            echo 'enviado com sucesso';
-        }else{
-            echo 'erro ao enviar';
+//arrumar o foreach para nao $_post e sim para pegar cada informacao dos form corretamente 
+    if(isset($_POST['acao'])){
+        $assunto = 'Novo E-mail para contato';
+        $corpo = '';
+        foreach ($_POST as $key => $value) {
+            $corpo.=ucfirst($key).": ".$value;
+            $corpo.="<hr>";
         }
-    }catch(Exception $e){
-        echo "erro: {$email->ErrorInfo}";
-    }
-
-
+        $info = array('assunto'=>$assunto,'corpo'=>$corpo);
+        $mail = new Email('smtp.gmail.com','chrissummoners2020@gmail.com','102030chris','Christopher');
+        $mail->addAdress('chrissummoners2020@gmail.com','Christopher');
+        $mail->formatarEmail($info);
+        if($mail->enviarEmail()){
+            echo '<script>alert("enviado com sucesso")</script>';
+        }else{
+            echo '<script>alert("deu bem ruim")</script>';
+        }
+    } 
 ?>
+
 
 <section class="contato">
     <div class="center">
     <h2>Entre em contato</h2>
         <form method="post">
-            <input type="text" placeholder="Nome" name="nome">
-            <input type="email" placeholder="E-mail" name="email">
-            <input type="text" placeholder="Telefone" name="telefone">
-            <textarea name="" id="" cols="30" rows="10" placeholder="Deixe sua mensagem aqui..." name="mensagem"></textarea>
+            <input type="text" placeholder="Nome" name="nome" required>
+            <input type="email" placeholder="E-mail" name="email" required>
+            <input type="text" placeholder="Telefone" name="telefone" required>
+            <textarea cols="30" rows="10" placeholder="Deixe sua mensagem aqui..." name="mensagem" required></textarea>
             <input type="submit" value="Enviar" name="acao">
         </form>
         <div class="mapa">
