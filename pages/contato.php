@@ -2,12 +2,13 @@
 //arrumar o foreach para nao $_post e sim para pegar cada informacao dos form corretamente 
     if(isset($_POST['acao'])){
         $assunto = 'Novo E-mail para contato';
-        $corpo = '';
-        foreach ($_POST as $key => $value) {
-            $corpo.=ucfirst($key).": ".$value;
-            $corpo.="<hr>";
+        $mensagem ='';
+        $corpo = ['Nome: '=>$_POST['nome'],'E-mail: '=>$_POST['email'],'Telefone: '=>$_POST['telefone'],'Mensagem: '=>$_POST['mensagem']];
+        foreach ($corpo as $key => $value) {
+            $mensagem.=$key.": ".$value;
+            $mensagem.="<br>";
         }
-        $info = array('assunto'=>$assunto,'corpo'=>$corpo);
+        $info = array('assunto'=>$assunto,'corpo'=>$mensagem);
         $mail = new Email('smtp.gmail.com','chrissummoners2020@gmail.com','102030chris','Christopher');
         $mail->addAdress('chrissummoners2020@gmail.com','Christopher');
         $mail->formatarEmail($info);
