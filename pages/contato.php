@@ -3,7 +3,7 @@
     if(isset($_POST['acao'])){
         $assunto = 'Novo E-mail para contato';
         $mensagem ='';
-        $corpo = ['Nome: '=>$_POST['nome'],'E-mail: '=>$_POST['email'],'Telefone: '=>$_POST['telefone'],'Mensagem: '=>$_POST['mensagem']];
+        $corpo = ['Nome'=>$_POST['nome'],'E-mail'=>$_POST['email'],'Telefone'=>$_POST['telefone'],'Mensagem'=>$_POST['mensagem']];
         foreach ($corpo as $key => $value) {
             $mensagem.=$key.": ".$value;
             $mensagem.="<br>";
