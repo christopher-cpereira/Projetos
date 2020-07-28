@@ -1,20 +1,29 @@
 <?php
-//arrumar o foreach para nao $_post e sim para pegar cada informacao dos form corretamente 
+//aqui nós preparamos o email a ser disparado quando o metodo post é acionado no botão 'acao'
     if(isset($_POST['acao'])){
+        //vamos preparar a mensagem com assunto e tudo
         $assunto = 'Novo E-mail para contato';
         $mensagem ='';
+        //a mensagem vai receber as informacoes deste $_post, vamos percorre-lo
         $corpo = ['Nome'=>$_POST['nome'],'E-mail'=>$_POST['email'],'Telefone'=>$_POST['telefone'],'Mensagem'=>$_POST['mensagem']];
         foreach ($corpo as $key => $value) {
             $mensagem.=$key.": ".$value;
             $mensagem.="<br>";
         }
+        //preparamos uma info que sera enviada para a classe email.php e executara as seguintes funcoes
         $info = array('assunto'=>$assunto,'corpo'=>$mensagem);
+        //instanciamos a classe para logar no email
         $mail = new Email('smtp.gmail.com','chrissummoners2020@gmail.com','102030chris','Christopher');
+        //para quem enviamos o email
         $mail->addAdress('chrissummoners2020@gmail.com','Christopher');
+        //preparamos a mensagem com assunto e tudo certinho
         $mail->formatarEmail($info);
+        //enviamos
         if($mail->enviarEmail()){
+            //se retornar true
             echo '<script>alert("enviado com sucesso")</script>';
         }else{
+            //se retornar false
             echo '<script>alert("deu bem ruim")</script>';
         }
     } 
@@ -29,7 +38,7 @@
             <input type="email" placeholder="E-mail" name="email" required>
             <input type="text" placeholder="Telefone" name="telefone" required>
             <textarea cols="30" rows="10" placeholder="Deixe sua mensagem aqui..." name="mensagem" required></textarea>
-            <input type="submit" value="Enviar" name="acao">
+            <input type="submit" value="Enviar" name="acao"><!--acao-->
         </form>
         <div class="mapa">
             <h2>Como chegar</h2>
