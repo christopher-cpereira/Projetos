@@ -1,6 +1,6 @@
 <?php
 
-    //esse carinha aqui sera comentado e explicado mais para frente.
+    //sem este session start ele daria problema na verificacao de sistemas de login em geral
     session_start();
 
     $autoload = function($class){
@@ -16,5 +16,8 @@
 
 //AQUI NOS DEFINIMOS QUE O INCLUDE_PATH E UMA VARIALVEL QUE RECEBE O CAMINHO DA NOSSA INDEX.PHP
     define('INCLUDE_PATH','http://localhost/Projeto-01/');
+
+    //agr vamos fazer o include path do painel, aproveitando o caminho do outro include
+    define('INCLUDE_PATH_PAINEL', INCLUDE_PATH.'painel/');
 
 ?>
