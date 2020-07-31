@@ -20,4 +20,10 @@
     //agr vamos fazer o include path do painel, aproveitando o caminho do outro include
     define('INCLUDE_PATH_PAINEL', INCLUDE_PATH.'painel/');
 
+    //agr vem o danado do banco de dados kkkk vamos preparar as informacoes para entrar com o pdo 
+    define('HOST','localhost');
+    define('USER','root');
+    define('PASSWORD','');
+    define('DATABASE','sistema');
+
 ?>
