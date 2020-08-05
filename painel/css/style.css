@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+/*pagina login*/
 html,body{
     height: 100%;
     background: rgba(94, 22, 68, 0.9);;
@@ -51,3 +52,60 @@ input[type=submit]{
     color: #ffffff;
     font-size: 15px;
 }
+
+
+/*painel de controle*/
+.clear{
+    clear: both;
+}
+.center{
+    padding: 0 2%;
+    margin: 0 auto;
+}
+.menu{
+    overflow-y: auto;
+    height: 100%;
+    background: rgb(65, 20, 48);
+    float: left;
+    width: 300px;
+}
+header{
+    float: left;
+    padding: 15px 0;
+    background: rgb(112, 47, 87);
+    width: calc(100% - 300px);
+}
+.loggout{
+    float: right;
+}
+.loggout a{
+    color: #ffffff;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

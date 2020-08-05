@@ -29,8 +29,6 @@
 
 <body>   
 
-
-
     <header>
         <div class="center">
             <div class="logo left">Workspace</div><!--logomarca-->
