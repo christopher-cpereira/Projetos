@@ -26,4 +26,15 @@
     define('PASSWORD','');
     define('DATABASE','sistema');
 
+
+    //funcoes para pegar o cargo do usuario
+    //criamos uma array para que quando pegar o cargo durante o login ele define qual o nivel de cargo do usuario, e quais acoes ele pode tomar no painel
+    function pegaCargo($cargo){
+        $arr = [
+            '0' => 'Normal',
+            '1' => 'Sub Administrador',
+            '2' => 'Administrador'
+        ];
+        return $arr[$cargo];
+    }
 ?>

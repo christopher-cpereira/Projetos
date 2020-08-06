@@ -22,16 +22,70 @@
 <body>
     <!--esse menu atraves do css tem sua propria barra de rolagem caso tenha mais itens do que a tela-->
     <div class="menu">
+        <div class="menu-wraper">
+            <div class="box-usuario">
+                <?php
+                //se a img no banco de dado for vazia ele deixa a classe do font wasome i
+                    if($_SESSION['img'] ==''){
+                ?>
+                    <div class="avatar-usuario">
+                        <i class="fa fa-user"></i>
+                    </div>
+                <?php
+                //se estiver com uma img no banco de dados, pega imagem atraves da session criada e puxada atraves do fetch la no login.php
+                    }else{ ?>
+                    <div class="imagem-usuario">
+                        <img src="<?php echo INCLUDE_PATH_PAINEL ?>uploads/<?php echo $_SESSION['img']; ?>">
+                    </div>
+                <?php
+                    }
+                ?>
 
+                <!--pegamos o nome atraves do fetch pelo login.php session, o cargo tambem-->
+                <div class="nome-usuario">
+                    <p><?php echo $_SESSION['nome']; ?></p>
+                    <p><?php echo pegaCargo($_SESSION['cargo']); ?></p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <header>
         <div class="center">
+        <div class="menubotao">
+            <i class="fas fa-caret-square-down"></i>
+        </div>
             <div class="loggout">
-                <a href="<?php echo INCLUDE_PATH_PAINEL ?>?loggout"><i class="fas fa-user-times"></i></a>
+                <a href="<?php echo INCLUDE_PATH_PAINEL ?>?loggout">Sair <i class="fas fa-user-times"></i></a>
             </div>
         </div>
         <div class="clear"></div>
     </header>
+
+    <div class="content">
+        <div class="box-content left w100">
+
+        </div>
+        <!--
+        <div class="box-content left w100">
+
+        </div>
+        
+        <div class="box-content left w50">
+
+        </div>
+
+        <div class="box-content right w50">
+
+        </div>
+            -->
+
+        <div class="clear"></div>
+    </div>
+    
+    <!--vamos fazer a animacao do botao para esconder e aparecer com jquery-->
+    <script src="<?php echo INCLUDE_PATH_PAINEL ?>js/jquery.js"></script>
+    <script src="<?php echo INCLUDE_PATH_PAINEL ?>js/main.js"></script>
+
 </body>
 </html>

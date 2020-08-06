@@ -36,8 +36,15 @@
                 if($sql->rowCount()==1){
                     //logado
                     $_SESSION['login'] = true;
-                    $_SESSION['usuario'] = $usuario;
-                    $_SESSION['senha'] = $senha;
+                    //$_SESSION['usuario'] = $usuario;
+                    //$_SESSION['senha'] = $senha;
+
+                    //pega uma coluna so utilizando o fetch, assim podemos pegar valores da nosso usuario de forma simples apos fazer o login corretamente
+                    //colocamos essa informacoes dentro de sessoes para trabalharmos com eles depois
+                    $info = $sql->fetch();
+                    $_SESSION['cargo'] = $info['cargo'];
+                    $_SESSION['nome'] = $info['nome'];
+                    $_SESSION['img'] = $info['img'];
                     //redirecionamos ele para o index, ai ele verifica la se o painel logado e true ou false, ele vai dar true entao sera redireciado para a tela main.php
                     header('Location: '.INCLUDE_PATH_PAINEL);
                     die();

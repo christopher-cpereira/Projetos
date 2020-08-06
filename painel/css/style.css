@@ -63,14 +63,23 @@ input[type=submit]{
     margin: 0 auto;
 }
 .menu{
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-x: hidden;
     overflow-y: auto;
     height: 100%;
     background: rgb(65, 20, 48);
     float: left;
     width: 300px;
+    padding: 10px;
+}
+.menu-wraper{
+    width: 300px;
 }
 header{
-    float: left;
+    position: relative;
+    left: 300px;
     padding: 15px 0;
     background: rgb(112, 47, 87);
     width: calc(100% - 300px);
@@ -80,8 +89,97 @@ header{
 }
 .loggout a{
     color: #ffffff;
-    font-size: 20px;
+    font-size: 25px;
+    text-decoration: none;
 }
+.menubotao i{
+    float: left;
+    font-size: 30px;
+    cursor: pointer;
+    color: #ffffff;
+}
+.box-usuario{
+    text-align: center;
+}
+.avatar-usuario{
+    text-align: left;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: #ffffff;
+    display: inline-block;
+    border: 2px solid black;
+}
+.avatar-usuario i{
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 50px;
+    color: rgba(94, 22, 68, 0.9);
+}
+.nome-usuario{
+    text-align: center;
+    margin-top: 12px;
+}
+.nome-usuario p{
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+/*conteudo do painel*/
+.w100{
+    width: 100%;
+}
+.w50{
+    width: 49%;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.content{
+    width: calc(100% - 300px);
+    position: relative;
+    left: 300px;
+    padding: 10px;
+}
+.box-content{
+    background: #ffffff;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px){
+    .menu{
+        display:none;
+    }
+    .box-content{
+        width: 100%;
+        left: 0;
+    }
+    header{
+        left: 0;
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
