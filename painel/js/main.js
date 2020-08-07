@@ -19,7 +19,7 @@ $(function(){
             });
         }else{
             //menu fechado vamos abri-lo
-            $('.menu').animate({'width':'300px', 'padding':'10px'}, function(){
+            $('.menu').animate({'width':'300px', 'padding':'10px 10px 10px 0px;'}, function(){
                 open = true;
             });
             $('.content,header').css('width','calc(100% - 300px)');

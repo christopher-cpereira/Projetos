@@ -75,8 +75,30 @@ input[type=submit]{
     background: rgb(65, 20, 48);
     float: left;
     width: 300px;
-    padding: 10px;
+    padding: 10px 10px 10px 0px;
 }
+.itens-menu{
+    margin-top: 30px;
+}
+.itens-menu h2{
+    text-align: left;
+    font-weight: 300;
+    font-size: 18px;
+    background: rgb(112, 47, 87);
+    color: #ffffff;
+    padding: 8px;
+}
+.itens-menu a{
+    display: block;
+    padding: 8px;
+    font-weight: 300;
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    border-bottom: 2px solid rgb(112, 47, 87);
+}
+
 .menu-wraper{
     width: 300px;
 }
@@ -121,9 +143,26 @@ header{
     font-size: 50px;
     color: rgba(94, 22, 68, 0.9);
 }
+.imagem-usuario{
+    display: inline-block;
+    width: 130px;
+    height: 130px;
+    position: relative;
+    border-radius: 50%;
+    border: 3px solid black;
+}
+.imagem-usuario img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
 .nome-usuario{
     text-align: center;
     margin-top: 12px;
+    margin-bottom: 20px;
 }
 .nome-usuario p{
     color: #ffffff;

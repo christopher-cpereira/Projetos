@@ -47,6 +47,21 @@
                     <p><?php echo pegaCargo($_SESSION['cargo']); ?></p>
                 </div>
             </div>
+
+            <div class="itens-menu">
+                <h2>Cadastro</h2>
+                <a href="">Cadastrar depoimento</a>
+                <a href="">Cadstrar servico</a>
+                <h2>Gestao</h2>
+                <a href="">Listar depoimentos</a>
+                <a href="">Listar servicos</a>                
+                <h2>Administracao do painel</h2>
+                <a href="">Editar usuario</a>
+                <a href="">Adicionar usuarios</a>   
+                <h2>Configuracao geral</h2>
+                <a href="">Editar</a>              
+            </div>
+
         </div>
     </div>
 
@@ -65,21 +80,29 @@
     <div class="content">
         <div class="box-content left w100">
 
-        </div>
-        <!--
-        <div class="box-content left w100">
+            <h2><i class="fa fa-home"></i>Painel de controle - Workspace</h2>
+
+            <div class="box-metricas">
+                <div class="box-metricas-single">
+                        <h2>Usuarios Online</h2>
+                        <p>10</p>
+                </div>
+            </div>
+            <div class="box-metricas">
+                <div class="box-metricas-single">
+                        <h2>Total de Visitas</h2>
+                        <p>10</p>
+                </div>
+            </div>
+            <div class="box-metricas">
+                <div class="box-metricas-single">
+                        <h2>Visitas hoje</h2>
+                        <p>10</p>
+                </div>
+            </div>
 
         </div>
-        
-        <div class="box-content left w50">
-
-        </div>
-
-        <div class="box-content right w50">
-
-        </div>
-            -->
-
+     
         <div class="clear"></div>
     </div>
     
