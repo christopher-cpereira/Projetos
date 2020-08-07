@@ -8,6 +8,9 @@ html,body{
     height: 100%;
     background: rgba(94, 22, 68, 0.9);;
 }
+body{
+    overflow-x: hidden;
+}
 h2{
     color: rgba(94, 22, 68, 0.9);
     text-align: left;
@@ -155,9 +158,11 @@ header{
 
 @media screen and (max-width: 768px){
     .menu{
-        display:none;
+        padding: 0;
+        width: 0;
+        /*nao e para fazer display none, ser nao no responsivo o click para esconder o menu some e nao volta mais*/
     }
-    .box-content{
+    .content{
         width: 100%;
         left: 0;
     }
