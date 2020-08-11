@@ -50,7 +50,8 @@
 
             <div class="itens-menu">
                 <h2>Cadastro</h2>
-                <a href="">Cadastrar depoimento</a>
+                <!--agr aqui quando clicado passa a informacao via url e o get pega e nos tgraz a pagina correspondente-->
+                <a href="<?php echo INCLUDE_PATH_PAINEL ?>cadastrardepoismentos">Cadastrar depoimento</a>
                 <a href="">Cadstrar servico</a>
                 <h2>Gestao</h2>
                 <a href="">Listar depoimentos</a>
@@ -67,43 +68,23 @@
 
     <header>
         <div class="center">
-        <div class="menubotao">
-            <i class="fas fa-caret-square-down"></i>
-        </div>
+            <div class="menubotao">
+                <i class="fas fa-caret-square-down"></i>
+            </div>
+
             <div class="loggout">
+                <a href="<?php echo INCLUDE_PATH_PAINEL ?>?home">Home <i class="fas fa-home"></i></a>
                 <a href="<?php echo INCLUDE_PATH_PAINEL ?>?loggout">Sair <i class="fas fa-user-times"></i></a>
             </div>
         </div>
+
         <div class="clear"></div>
     </header>
 
     <div class="content">
-        <div class="box-content left w100">
-
-            <h2><i class="fa fa-home"></i>Painel de controle - Workspace</h2>
-
-            <div class="box-metricas">
-                <div class="box-metricas-single">
-                        <h2>Usuarios Online</h2>
-                        <p>10</p>
-                </div>
-            </div>
-            <div class="box-metricas">
-                <div class="box-metricas-single">
-                        <h2>Total de Visitas</h2>
-                        <p>10</p>
-                </div>
-            </div>
-            <div class="box-metricas">
-                <div class="box-metricas-single">
-                        <h2>Visitas hoje</h2>
-                        <p>10</p>
-                </div>
-            </div>
-
-        </div>
-     
-        <div class="clear"></div>
+        <?php
+            Painel::carregarPagina();
+        ?>
     </div>
     
     <!--vamos fazer a animacao do botao para esconder e aparecer com jquery-->

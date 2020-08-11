@@ -1,5 +1,8 @@
 <?php
 
+    //vamos pegar o horario correto de sao paulo para verificarmos os usuarios onlines
+    date_default_timezone_set('America/Sao_Paulo');
+
     //sem este session start ele daria problema na verificacao de sistemas de login em geral
     session_start();
 

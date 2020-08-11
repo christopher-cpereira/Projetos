@@ -113,6 +113,7 @@ header{
     float: right;
 }
 .loggout a{
+    margin-right: 20px;
     color: #ffffff;
     font-size: 25px;
     text-decoration: none;
@@ -170,6 +171,21 @@ header{
     font-weight: normal;
 }
 
+/*tabela da home*/
+.table{
+    margin: 20px auto;
+    max-width: 1280px;
+}
+.col{
+    float: left;
+    width: 50%;
+}
+.table .row:nth-last-of-type(1){
+    font-weight: bold;
+    border-bottom: 1px solid black;
+    padding: 8px 0;
+}
+
 /*conteudo do painel*/
 .w100{
     width: 100%;
@@ -192,7 +208,7 @@ header{
 .box-content{
     background: #ffffff;
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 @media screen and (max-width: 768px){

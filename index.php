@@ -7,6 +7,9 @@
 <!--o include_path ja arruma tambem as url deixando elas amigaveis quando vamos navegar nos a href-->
 <?php include('config.php');?>
 
+<!--vamos cahamr a classe do usuario online para ser verificado la no painel-->
+<?php Site::usuarioOnline();?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 

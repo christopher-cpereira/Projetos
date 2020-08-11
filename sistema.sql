@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 07-Ago-2020 às 03:29
+-- Tempo de geração: 11-Ago-2020 às 03:34
 -- Versão do servidor: 10.4.13-MariaDB
 -- versão do PHP: 7.2.31
 
@@ -52,8 +52,16 @@ INSERT INTO `tb-admin-usuarios` (`id`, `usuario`, `senha`, `img`, `nome`, `cargo
 CREATE TABLE `tb_admin_online` (
   `id` int(11) NOT NULL,
   `ip` varchar(255) NOT NULL,
-  `ultima_acao` datetime NOT NULL
+  `ultima_acao` datetime NOT NULL,
+  `token` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `tb_admin_online`
+--
+
+INSERT INTO `tb_admin_online` (`id`, `ip`, `ultima_acao`, `token`) VALUES
+(1, '::1', '2020-08-10 22:33:34', '5f31f55359f8b');
 
 -- --------------------------------------------------------
 
@@ -64,7 +72,8 @@ CREATE TABLE `tb_admin_online` (
 CREATE TABLE `tb_admin_visitas` (
   `id` int(11) NOT NULL,
   `ip` varchar(255) NOT NULL,
-  `dia` date NOT NULL
+  `dia` date NOT NULL,
+  `token` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -103,7 +112,7 @@ ALTER TABLE `tb-admin-usuarios`
 -- AUTO_INCREMENT de tabela `tb_admin_online`
 --
 ALTER TABLE `tb_admin_online`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de tabela `tb_admin_visitas`
