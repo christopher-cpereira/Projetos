@@ -181,9 +181,25 @@ header{
     width: 50%;
 }
 .table .row:nth-last-of-type(1){
-    font-weight: bold;
-    border-bottom: 1px solid black;
-    padding: 8px 0;
+    /*font-weight: bold;*/
+    /*border-bottom: 1px solid black;*/
+    /*padding: 8px 0;*/
+}
+.box-metricas-single{
+    margin: 12px;
+    background: rgba(94, 22, 68, 0.9);
+    padding: 10px;
+    border-radius: 10px;
+}
+.box-metricas{
+    min-width: 500px;
+}
+.box-metricas-single p{
+    color: #ffffff;
+    font-size: 18px;
+}
+.box-metricas-single h2{
+    color: #ffffff;
 }
 
 /*conteudo do painel*/
@@ -192,6 +208,9 @@ header{
 }
 .w50{
     width: 49%;
+}
+.w33{
+    width: 33,3%;
 }
 .left{
     float: left;
@@ -227,7 +246,11 @@ header{
     }
 }
 
-
+@media screen and (max-width: 1840px){
+    .box-metricas{
+        width: 100%;
+    }
+}
 
 
 

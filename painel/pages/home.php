@@ -1,28 +1,29 @@
 <div class="box-content left w100">
 
     <h2><i class="fa fa-home"></i>Painel de controle - Workspace</h2>
-
-        <div class="box-metricas">
+    <div class="w100">
+        <div class="box-metricas w33 left">
             <div class="box-metricas-single">
                     <h2>Usuarios Online</h2>
                     <p>10</p>
             </div>
         </div>
 
-        <div class="box-metricas">
+        <div class="box-metricas w33 left">
             <div class="box-metricas-single">
                     <h2>Total de Visitas</h2>
                     <p>10</p>
             </div>
         </div>
 
-        <div class="box-metricas">
+        <div class="box-metricas w33 left">
             <div class="box-metricas-single">
                 <h2>Visitas hoje</h2>
                     <p>10</p>
             </div>
         </div>
-        
+        <div class="clear"></div>
+    </div>
 </div>
 <div class="clear"></div>
 
