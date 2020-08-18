@@ -1,3 +1,7 @@
+<?php
+    $usuariosOnline = Painel::listarUsuariosOnline();
+?>
+
 <div class="box-content left w100">
 
     <h2><i class="fa fa-home"></i>Painel de controle - Workspace</h2>
@@ -5,7 +9,7 @@
         <div class="box-metricas w33 left">
             <div class="box-metricas-single">
                     <h2>Usuarios Online</h2>
-                    <p>10</p>
+                    <p><?php echo count($usuariosOnline); ?></p>
             </div>
         </div>
 

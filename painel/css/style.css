@@ -180,11 +180,13 @@ header{
     float: left;
     width: 50%;
 }
-.table .row:nth-last-of-type(1){
+
+/*.table .row:nth-last-of-type(1){
     /*font-weight: bold;*/
     /*border-bottom: 1px solid black;*/
     /*padding: 8px 0;*/
-}
+/*}*/
+
 .box-metricas-single{
     margin: 12px;
     background: rgba(94, 22, 68, 0.9);
